@@ -27,12 +27,12 @@ This demo simulates a lightweight migration/integration scenario and showcases:
 ## Project Files
 
 ### `hubspot_test_connection.py`
-    **Purpose:** Validates authentication and connectivity to HubSpot before running migration logic.
+**Purpose:** Validates authentication and connectivity to HubSpot before running migration logic.
 
-    **HubSpot API used:**
+**HubSpot API used:**
     - `GET /crm/v3/objects/contacts`
 
-    **What it does:**
+**What it does:**
     - Loads the Bearer token from `.env`
     - Sends a test request to HubSpot Contacts API
     - Confirms the API is reachable and returns JSON successfully
