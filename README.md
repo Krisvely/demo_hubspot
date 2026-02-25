@@ -40,12 +40,12 @@ This demo simulates a lightweight migration/integration scenario and showcases:
 ---
 
 ### `hubspot_seed_contacts.py`
-    **Purpose:** Seeds sample data into HubSpot so the source CRM contains records for migration testing.
+**Purpose:** Seeds sample data into HubSpot so the source CRM contains records for migration testing.
 
-    **HubSpot API used:**
+**HubSpot API used:**
     - `POST /crm/v3/objects/contacts`
 
-    **What it does:**
+**What it does:**
     - Creates demo contacts in HubSpot via REST API
     - Uses timestamp-based emails to avoid duplicate conflicts
     - Returns the created records and response status for validation
@@ -53,12 +53,12 @@ This demo simulates a lightweight migration/integration scenario and showcases:
 ---
 
 ### `hubspot_to_sqlite_migration.py`
-    **Purpose:** Simulates an ETL migration flow from HubSpot into a lightweight target CRM (SQLite).
+**Purpose:** Simulates an ETL migration flow from HubSpot into a lightweight target CRM (SQLite).
 
-    **HubSpot API used:**
+**HubSpot API used:**
     - `GET /crm/v3/objects/contacts`
 
-    **What it does:**
+**What it does:**
     - **Extract:** Reads contacts from HubSpot
     - **Transform:** Formats full name, normalizes email, validates basic email structure
     - **Load:** Inserts records into SQLite (`target_crm_demo.db`)
@@ -68,13 +68,13 @@ This demo simulates a lightweight migration/integration scenario and showcases:
 ---
 
 ### `hubspot_update_contact.py`
-    **Purpose:** Demonstrates incremental source changes by updating an existing contact in HubSpot.
+**Purpose:** Demonstrates incremental source changes by updating an existing contact in HubSpot.
 
-    **HubSpot APIs used:**
+**HubSpot APIs used:**
     - `POST /crm/v3/objects/contacts/search` (search by email)
     - `PATCH /crm/v3/objects/contacts/{contactId}` (update contact properties)
 
-    **What it does:**
+**What it does:**
     - Finds a contact by email using the HubSpot Search API
     - Retrieves the contact ID
     - Updates one or more fields (e.g. last name)
